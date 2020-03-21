@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(18,43,71);
+    background:
+        url(../images/stars.png),
+        linear-gradient(180deg, rgba(18,43,71,1) 0%, rgba(18,20,37,1) 51%, rgba(46,25,54,1) 100%);
+    position: relative;
+    background-size: 200px 200px, cover;
+    min-width:1200px;
+    min-height:800px;
+}
+.rocket {
+    width:89px;
+    height: 150px;
+    position: absolute;
+    left:260px;
+    top:500px;
+    z-index: 2;
+}
+
+.rocket span {
+    display: block;
+    background: url(../images/rocket.png);
+    width:89px;
+    height: 150px;
+    position: relative;
+    z-index: 1;
+}
+.rocket.fly::after {
+    content:'';
+    background: url(../images/fire.png);
+    background-size: cover;
+    width:42px;
+    height:67px;
+    position: absolute;
+    left:50%;
+    top:87%;
+    transform: translate(-50%, 0);
+    animation: fire 0.1s 0s infinite alternate;
+    transform-origin: 50% 0;
+    z-index: 0;
+}
+@keyframes fire {
+    50% {
+        transform: translate(-50%, 0) scale(0.9, 1);
+    }
+    100% {
+        transform: translate(-50%, 0) scale(1, 0.9);
+    }
+}
+.planet1 {
+    position: absolute;
+    background: url(../images/planet1.png);
+    width: 228px;
+    height: 229px;
+    left:150px;
+    top:100px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(176,22,4,0.4), 0 0 100px rgba(249,149,34, 0.2);
+}
+.planet2 {
+    position: absolute;
+    background: url(../images/planet2.png);
+    width: 201px;
+    height: 201px;
+    left:calc(100% - 350px);
+    top:150px;
+}
+.planet3 {
+    position: absolute;
+    background: url(../images/planet3.png);
+    width: 257px;
+    height: 246px;
+    left:calc(100% - 460px);
+    top: calc(100% - 350px);
+
+}
+.planet4 {
+    position: absolute;
+    background: url(../images/planet4.png);
+    width: 225px;
+    height: 225px;
+    left:200px;
+    top:calc(100% - 300px);
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(247,215,76, 0.2);
+}
+
+/*Animacje*/
+
+
+.goup {
+    animation: goup 2s 0s 1 linear forwards;
+}
+
+@keyframes goup {
+    0% {
+        top: 100px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+.godown {
+    animation: godown 2s 0s 1 linear forwards;
+}
+
+@keyframes godown {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0px, 100px);
+    }
+}
+
+.goleft {
+    animation: goleft 2s 0s 1 linear forwards;
+}
+
+@keyframes goleft {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: -100px;
+    }
+}
+
+
+.goright {
+    animation: goright 2s 0s 1 linear forwards;
+}
+
+@keyframes goright {
+    0% {
+        transform: translate(0px, 0);
+    }
+    100% {
+        transform: translate(100px, 0);
+    }
+}

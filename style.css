@@ -1,0 +1,23 @@
+
+.lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lista ul li {
+    padding-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    list-style: none;
+}
+
+.lista ul li a {
+    color: green;
+}
+
+.lista h1 {
+    font-size: 50px;
+    text-align: center;
+}
